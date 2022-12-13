@@ -337,4 +337,4 @@ function initOciliator(remove) {
   }
 }
 
-export default initOciliator;
+initOciliator();
