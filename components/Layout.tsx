@@ -6,7 +6,7 @@ interface Props {
 }
 function Layout({ children }: Props) {
   return (
-    <div className="flex relative">
+    <div className="flex relative w-[100vw] h-[100vh] overflow-x-hidden overflow-y-scroll">
       <Sidebar />
       {children}
     </div>

@@ -4,6 +4,7 @@ import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { RiCloseLine } from 'react-icons/ri';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 interface Props {}
 
@@ -44,6 +45,7 @@ const connects = [
 ];
 function Sidebar({}: Props) {
   const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     if (window?.innerWidth > 1200) {
@@ -81,9 +83,12 @@ function Sidebar({}: Props) {
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={`w-full flex z-[10] flex-col absolute left-0 bottom-0 top-0 right-0 bg-background xl:sticky  xl:right-0 xl:w-[170px] text-cyan transition-all ease-out duration-700 items-center xl:block border-r-[1px] border-black`}
+            className={`w-full flex z-[10] flex-col absolute left-0 bottom-0 top-0 right-0 bg-sideMenuBg xl:sticky  xl:right-0 xl:w-[170px] text-cyan transition-all ease-out duration-700 items-center xl:block border-r-[1px] border-black`}
           >
-            <div className="flex flex-col bg-black w-full p-4 py-8 items-center justify-center">
+            <div
+              className="flex flex-col bg-black w-full p-4 py-8 items-center justify-center"
+              onClick={() => router.push('/')}
+            >
               <div className="text-[100px] font-bold text-brick text-shadow-behind-left leading-[1] cursor-pointer">
                 N
               </div>
@@ -143,7 +148,7 @@ function Sidebar({}: Props) {
       </AnimatePresence>
 
       <div
-        className="flex items-center justify-center fixed top-4 right-4 text-2xl xl:hidden text-white z-[0] cursor-pointer"
+        className="flex items-center justify-center fixed top-4 right-4 text-2xl xl:hidden text-white z-[1] cursor-pointer"
         onClick={() => setShowMenu(true)}
       >
         <motion.span

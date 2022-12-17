@@ -15,6 +15,7 @@ module.exports = {
       white: '#fff',
       tagColor: '#515152',
       grey: '#a5a5a5',
+      sideMenuBg: '#181818',
     },
     extend: {
       fontFamily: {

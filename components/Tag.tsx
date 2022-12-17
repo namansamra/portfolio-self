@@ -7,7 +7,7 @@ interface Props {
 function Tag({ tagName, stylesString = '' }: Props) {
   return (
     <div
-      className={`flex items-center font-labelleCursive text-tagColor text-[24px] font-md ${stylesString}`}
+      className={`flex items-center font-labelleCursive text-tagColor text-[20px] font-md ${stylesString}`}
     >
       {tagName}
     </div>

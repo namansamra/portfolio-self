@@ -37,20 +37,25 @@ function WobbleEffect({
         'text-[42px] md:text-[80px] lg:text-[80px] xl:text-[100px]text-white font-bold leading-[1] ' +
         styleString
       }
+      key="unique"
       variants={sentence}
       initial="hidden"
       animate="visible"
       exit={{ opacity: 0 }}
     >
-      {text.split('\\n').map((line, index) => {
+      {text.split('\\n').map((line, i) => {
         let charSpans = line.split('').map((char, index) => {
           return (
             <motion.span
-              key={char + '-' + index}
+              key={char + '-' + index + i}
               variants={letter}
               className={`hover:text-cyan ${
                 char == ' ' ? '' : 'inline-block'
               } hover:animate-rubberbandEffect`}
+              onPointerMove={() => {
+                //animate letters
+                console.log('capture');
+              }}
             >
               {char}
             </motion.span>

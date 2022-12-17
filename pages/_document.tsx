@@ -8,6 +8,7 @@ export default class CustomDocument extends Document {
           <Main />
           <NextScript />
           <script src="/canvas.js"></script>
+          <script src="/tagcanvas.js"></script>
         </body>
       </Html>
     );
