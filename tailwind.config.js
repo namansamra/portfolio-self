@@ -20,7 +20,7 @@ module.exports = {
     extend: {
       fontFamily: {
         labelleCursive: [
-          `'La Belle Aurore', cursive;`,
+          `'La Belle Aurore', cursive`,
           ...defaultTheme.fontFamily.sans,
         ],
         caveat: [`'Caveat', cursive;`],
@@ -59,8 +59,8 @@ module.exports = {
         },
       },
       animation: {
-        processing: 'timelapse 1s cubic-bezier(.86,.05, .4, .96) 1 forwards',
-        rubberbandEffect: 'rubberband 1s cubic-bezier(.86,.05, .4, .96)',
+        processing: 'timelapse 1s cubic-bezier(.86,.05, .4, .96) 1 forwards;',
+        rubberbandEffect: 'rubberband 1s cubic-bezier(.86,.05, .4, .96);',
       },
     },
   },
