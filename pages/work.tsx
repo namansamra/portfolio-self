@@ -69,14 +69,14 @@ function Work() {
   useEffect(() => {
     if (ref.current) {
       setScreenWidth(
-        ref?.current?.clientWidth > 1200 ? 1200 : ref?.current?.clientWidth
+        ref?.current?.clientWidth >= 1280 ? 1280 : ref?.current?.clientWidth
       );
     }
   }, [ref?.current?.clientWidth]);
   return (
     <Layout>
       <div
-        className="w-full h-screen flex flex-col text-white relative bg-background overflow-y-scroll"
+        className="w-full h-screen flex flex-col text-white relative bg-background overflow-y-scroll overflow-x-hidden"
         ref={ref}
       >
         {images.map((img, i) => {

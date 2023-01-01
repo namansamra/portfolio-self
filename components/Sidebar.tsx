@@ -51,21 +51,21 @@ function Sidebar({}: Props) {
   const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
-    if (window?.innerWidth > 1200) {
+    if (window?.innerWidth > 1280) {
       setShowMenu(true);
     }
 
     let onceOpenCloseOnSmallScreenCommingFromBigScreen = false;
     const setMenuStateFun = (e: any) => {
       if (e?.target?.innerWidth) {
-        if (e.target.innerWidth >= 1200) {
+        if (e.target.innerWidth >= 1280) {
           onceOpenCloseOnSmallScreenCommingFromBigScreen = false;
           setShowMenu(true);
         }
 
         // if user firstly on bigger screen then get to small screen so menu should be closed now by default on small screen
         if (
-          e.target.innerWidth <= 1199 &&
+          e.target.innerWidth <= 1279 &&
           !onceOpenCloseOnSmallScreenCommingFromBigScreen
         ) {
           setShowMenu(true);
@@ -132,7 +132,6 @@ function Sidebar({}: Props) {
                       setShowLoader(true);
                       router.push(item.link);
                       if (screenWidth && screenWidth < 1280) {
-                        console.log('heloo ', screenWidth);
                         setShowMenu(false);
                       }
                     }}
