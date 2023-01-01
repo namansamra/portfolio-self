@@ -36,7 +36,7 @@ function About() {
   }, [ref.current]);
   return (
     <Layout>
-      <div className="w-full h-screen flex flex-col lg:flex-row text-white px-[20px] md:px-[50px] py-[30px] relative bg-background overflow-y-scroll">
+      <div className="w-full h-screen flex flex-col lg:flex-row text-white px-[20px] md:px-[50px] py-[30px] relative bg-background overflow-y-auto">
         <div className="w-full h-full lg:w-[50%] flex-col gap-4">
           <Tag tagName="<html>" />
           <Tag tagName="<body>" stylesString="xl:ml-5" />

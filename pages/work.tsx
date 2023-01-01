@@ -76,7 +76,7 @@ function Work() {
   return (
     <Layout>
       <div
-        className="w-full h-screen flex flex-col text-white relative bg-background overflow-y-scroll overflow-x-hidden"
+        className="w-full h-screen flex flex-col text-white relative bg-background overflow-y-auto overflow-x-hidden"
         ref={ref}
       >
         {images.map((img, i) => {
@@ -92,7 +92,7 @@ function Work() {
               }}
               transition={{ duration: 1 }}
             >
-              <div className="flex flex-col gap-4 p-6 lg:max-w-[50%]">
+              <div className="flex flex-col gap-4 w-full p-6 lg:max-w-[50%]">
                 <WobbleEffect
                   text={img.name}
                   styleString="xl sm:text-2xl lg:!text-5xl text-cyan mb-2 lg:mb-6"

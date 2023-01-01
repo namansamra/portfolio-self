@@ -18,10 +18,16 @@ const letter = {
   hidden: {
     opacity: 0,
     y: 400,
+    transition: {
+      repeat: 2,
+    },
   },
   visible: {
     opacity: 1,
     y: 0,
+    transition: {
+      repeat: 2,
+    },
   },
 };
 function WobbleEffect({
@@ -34,7 +40,7 @@ function WobbleEffect({
   return (
     <motion.h3
       className={
-        'text-[42px] md:text-[80px] lg:text-[80px] xl:text-[100px]text-white font-bold leading-[1] ' +
+        'text-[30px] sm:text-[42px] md:text-[80px] lg:text-[80px] xl:text-[100px]text-white font-bold leading-[1] ' +
         styleString
       }
       key="unique"
@@ -52,10 +58,6 @@ function WobbleEffect({
               className={`hover:text-cyan ${
                 char == ' ' ? '' : 'inline-block'
               } hover:animate-rubberbandEffect`}
-              onPointerMove={() => {
-                //animate letters
-                console.log('capture');
-              }}
             >
               {char}
             </motion.span>

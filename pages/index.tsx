@@ -5,23 +5,30 @@ import { motion } from 'framer-motion';
 import LightedButton from '../components/LightedButton';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+
 export default function Home() {
   useEffect(() => {
-    let canvas: any = document.getElementById('canvas');
+    try {
+      let canvas: any = document.getElementById('canvas');
 
-    const el = document.createElement('script');
-    el.src = '/canvas.js';
-    document?.head?.appendChild(el);
+      const el = document.createElement('script');
+      el.src = '/canvas.js';
+      document?.head?.appendChild(el);
 
-    canvas.width =
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth;
+      if (canvas) {
+        canvas.width =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
 
-    canvas.height =
-      window.innerHeight ||
-      document.documentElement.clientHeight ||
-      document.body.clientHeight;
+        canvas.height =
+          window.innerHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight;
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   const router = useRouter();
@@ -32,8 +39,6 @@ export default function Home() {
         <canvas
           className="absolute left-0 z-[-1] top-0 inline-block bg-background"
           id="canvas"
-          // height={'261'}
-          // width="1440"
         ></canvas>
         <Tag tagName="<html>" />
         <div className="mt-[25%] mb-[20px] sm:my-8">
@@ -58,9 +63,6 @@ export default function Home() {
           </motion.div>
           <Tag tagName="<body>" stylesString="xl:ml-5" />
         </div>
-        {/* <div className="cursor-pointer border-[1px] border-cyan bg-background text-cyan hover:text-background px-4 py-2 rounded-sm w-[200px] text-center font-md  hover:shadow-[inset_200px_0px_5px_0px_#08FDD8] duration-200 active:translate-y-1">
-          Contact Me!
-        </div> */}
         <motion.div
           className="sm:mt-4"
           initial={{ opacity: 1, scaleY: 0 }}
@@ -74,7 +76,7 @@ export default function Home() {
           />
         </motion.div>
 
-        <Tag tagName="<html>" stylesString="mt-4" />
+        <Tag tagName="<html>" stylesString="mt-8 sm:mt-4" />
       </div>
     </Layout>
   );

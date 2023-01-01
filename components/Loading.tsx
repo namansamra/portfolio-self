@@ -33,7 +33,7 @@ function Loading() {
               duration: 1,
             },
           }}
-          className="w-full h-screen flex flex-col lg:flex-row text-white px-[20px] md:px-[50px] py-[30px] bg-background overflow-y-scroll fixed top-0 z-9999"
+          className="w-full h-screen flex flex-col lg:flex-row text-white px-[20px] md:px-[50px] py-[30px] bg-background fixed top-0 z-9999"
         >
           <div className="flex flex-col z-100 h-[100vh] bg-background w-full items-center justify-center p-2">
             <div className="text-[70px] font-bold text-brick text-shadow-behind-after leading-[1] cursor-pointer">

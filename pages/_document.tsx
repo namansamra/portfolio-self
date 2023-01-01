@@ -3,7 +3,10 @@ export default class CustomDocument extends Document {
   render(): JSX.Element {
     return (
       <Html>
-        <Head></Head>
+        <Head>
+          <title>NS | Frontend Engineer</title>
+          <link rel="icon" href="/assets/logo.png" />
+        </Head>
         <body>
           <Main />
           <NextScript />

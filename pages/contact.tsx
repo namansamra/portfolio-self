@@ -11,7 +11,7 @@ import Map from '../components/Map';
 function Contact() {
   return (
     <Layout>
-      <div className="w-full h-screen flex flex-col lg:flex-row text-white px-[20px] md:px-[50px] py-[30px] relative bg-background overflow-y-scroll">
+      <div className="w-full h-screen flex flex-col lg:flex-row text-white px-[20px] md:px-[50px] py-[30px] relative bg-background overflow-y-auto">
         <div className="flex flex-col gap-2  min-w-[50%] lg:mr-10 mb-10">
           <Tag tagName="<html>" />
           <Tag tagName="<body>" stylesString="xl:ml-5" />
