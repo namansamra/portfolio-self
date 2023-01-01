@@ -59,7 +59,7 @@ module.exports = {
         },
       },
       animation: {
-        processing: 'timelapse 2s cubic-bezier(.86,.05, .4, .96) infinite',
+        processing: 'timelapse 1s cubic-bezier(.86,.05, .4, .96) 1 forwards',
         rubberbandEffect: 'rubberband 1s cubic-bezier(.86,.05, .4, .96)',
       },
     },

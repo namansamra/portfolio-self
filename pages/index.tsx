@@ -4,6 +4,7 @@ import WobbleEffect from '../components/WobbleEffect';
 import { motion } from 'framer-motion';
 import LightedButton from '../components/LightedButton';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 export default function Home() {
   useEffect(() => {
     let canvas: any = document.getElementById('canvas');
@@ -22,6 +23,8 @@ export default function Home() {
       document.documentElement.clientHeight ||
       document.body.clientHeight;
   }, []);
+
+  const router = useRouter();
 
   return (
     <Layout>
@@ -64,7 +67,11 @@ export default function Home() {
           animate={{ opacity: 1, scaleY: 1 }}
           transition={{ delay: 2 }}
         >
-          <LightedButton text="Contact Me!" styleString="xl:ml-8 xl:mb-3" />
+          <LightedButton
+            text="Contact Me!"
+            styleString="xl:ml-8 xl:mb-3"
+            onClick={() => router.push('/contact')}
+          />
         </motion.div>
 
         <Tag tagName="<html>" stylesString="mt-4" />

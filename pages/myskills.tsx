@@ -53,22 +53,19 @@ function MySkills() {
           <Tag tagName="<p>" stylesString="xl:ml-5" />
           <div className="flex text-[12px] sm:text-[14px] font-medium max-w-[600px] flex-col mt-1 ml-2 sm:ml-4 xl:ml-12 xl:text-[16px] gap-4">
             <p>
-              Since beginning my journey as a freelance developer nearly 2 years
-              ago, I’ve done remote work for agencies, consulted for startups,
-              and collaborated with talented people to create web products for
-              both business and consumer use.
+              Since beginning my journey as a developer nearly 2 years ago, I’ve
+              done remote work for for startups, and collaborated with talented
+              people to create web products for both business and consumer use.
             </p>
             <p>
               I create successful responsive websites that are fast, easy to
               use, and built with best practices. The main area of my expertise
               is front-end development, HTML, CSS, JS, building small and medium
-              web apps, custom plugins, features, animations, and coding
-              interactive layouts.
+              web apps and coding interactive layouts.
             </p>
             <p>
-              I also have full-stack developer experience with popular
-              open-source CMS like (WordPress, Drupal, Magento, Keystone.js and
-              others) .
+              I also have full-stack developer experience with Nodejs, Express,
+              MongoDB etc.
             </p>
             <p>
               Visit my

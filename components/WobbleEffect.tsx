@@ -17,7 +17,7 @@ const sentence = {
 const letter = {
   hidden: {
     opacity: 0,
-    y: 500,
+    y: 400,
   },
   visible: {
     opacity: 1,
@@ -48,7 +48,7 @@ function WobbleEffect({
           return (
             <motion.span
               key={char + '-' + index + i}
-              variants={letter}
+              variants={{ ...letter }}
               className={`hover:text-cyan ${
                 char == ' ' ? '' : 'inline-block'
               } hover:animate-rubberbandEffect`}

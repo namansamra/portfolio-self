@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import React, { useEffect, useRef } from 'react';
 import Layout from '../components/Layout';
+import Loading from '../components/Loading';
 import Tag from '../components/Tag';
 import WobbleEffect from '../components/WobbleEffect';
+import { useMainContext } from '../utils/context';
 
 function About() {
   const ref = useRef<any>(null);
@@ -25,7 +27,6 @@ function About() {
 
   useEffect(() => {
     if (ref.current) {
-      console.log(ref);
       const width = ref.current.clientWidth;
       const height = ref.current.clientHeight;
       const canvas: any = document.getElementById('myCanvas');
@@ -50,15 +51,12 @@ function About() {
           <Tag tagName="<p>" stylesString="xl:ml-5" />
           <div className="flex text-[12px] sm:text-[14px] font-medium max-w-[600px] flex-col mt-2 ml-2 sm:ml-4 xl:ml-12 xl:text-[16px] gap-4">
             <p>
-              I’m a Front-End Developer located in Poland. I have a serious
-              passion for UI effects, animations and creating intuitive, dynamic
-              user experiences.
+              I’m a Front-End Developer located in New Delhi. I have a serious
+              passion for UI and creating intuitive, dynamic user experiences.
             </p>
             <p>
-              Well-organised person, problem solver, independent employee with
-              high attention to detail. Fan of MMA, outdoor activities, TV
-              series and English literature. A family person and father of two
-              fractious boys,
+              Well-organised person, problem solver. Fan of Scifi Movies,
+              outdoor activities, Web series and Anime.
             </p>
             <p>
               Interested in the entire frontend spectrum and working on

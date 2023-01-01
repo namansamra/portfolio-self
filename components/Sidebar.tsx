@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { RiCloseLine } from 'react-icons/ri';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
+import { useMainContext } from '../utils/context';
 
 interface Props {}
 
@@ -46,6 +47,8 @@ const connects = [
 function Sidebar({}: Props) {
   const [showMenu, setShowMenu] = useState(false);
   const router = useRouter();
+  const { showLoader, setShowLoader } = useMainContext();
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
     if (window?.innerWidth > 1200) {
@@ -74,6 +77,11 @@ function Sidebar({}: Props) {
     window.addEventListener('resize', setMenuStateFun);
     return () => window.removeEventListener('resize', setMenuStateFun);
   }, []);
+
+  useEffect(() => {
+    setScreenWidth(window?.innerWidth);
+  });
+
   return (
     <>
       <AnimatePresence>
@@ -113,18 +121,25 @@ function Sidebar({}: Props) {
             <div className="flex flex-col w-full items-center text-center">
               {links.map((item, i) => {
                 return (
-                  <Link
+                  <div
                     className={
-                      'flex text-center items-center font-medium justify-center p-4 border-t-[1px] border-[#282828] w-full text-[#909096] hover:text-cyan ' +
+                      'flex text-center items-center font-medium justify-center p-4 border-t-[1px] border-[#282828] w-full text-[#909096] hover:text-cyan cursor-pointer ' +
                       (i + 1 == links.length
                         ? 'border-b-[1px] border-[#282828]'
                         : '')
                     }
-                    href={item.link}
+                    onClick={() => {
+                      setShowLoader(true);
+                      router.push(item.link);
+                      if (screenWidth && screenWidth < 1280) {
+                        console.log('heloo ', screenWidth);
+                        setShowMenu(false);
+                      }
+                    }}
                     key={item.id}
                   >
                     {item.title}
-                  </Link>
+                  </div>
                 );
               })}
             </div>

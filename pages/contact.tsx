@@ -6,6 +6,7 @@ import WobbleEffect from '../components/WobbleEffect';
 import { motion } from 'framer-motion';
 import { Input, Textarea } from '@chakra-ui/react';
 import LightedButton from '../components/LightedButton';
+import Map from '../components/Map';
 
 function Contact() {
   return (
@@ -63,7 +64,9 @@ function Contact() {
           <Tag tagName="</body>" stylesString="mt-2 xl:ml-5" />
           <Tag tagName="</html>" stylesString="mt-2" />
         </div>
-        <div className="flex w-full"> </div>
+        <div className="flex w-full">
+          <Map />
+        </div>
       </div>
     </Layout>
   );

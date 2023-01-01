@@ -1,6 +1,9 @@
 import React from 'react';
-
-export const MainContext = React.createContext<any>({});
+interface Props {
+  showLoader: boolean;
+  setShowLoader: (val: boolean) => void;
+}
+export const MainContext = React.createContext<Props | null>(null);
 
 export const useMainContext = () => {
   const context = React.useContext(MainContext);

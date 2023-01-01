@@ -4,16 +4,21 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import chakraTheme from '../styles/chakraTheme';
+import { useState } from 'react';
+import { MainContext } from '../utils/context';
 
 const emotionCache = createCache({
   key: 'emotion-css-cache',
   prepend: true, // ensures styles are prepended to the <head>, instead of appended
 });
 export default function App({ Component, pageProps }: AppProps) {
+  const [showLoader, setShowLoader] = useState(false);
   return (
     <CacheProvider value={emotionCache}>
       <ChakraProvider theme={chakraTheme}>
-        <Component {...pageProps} />
+        <MainContext.Provider value={{ showLoader, setShowLoader }}>
+          <Component {...pageProps} />
+        </MainContext.Provider>
       </ChakraProvider>
     </CacheProvider>
   );
