@@ -17,7 +17,7 @@ function Loading() {
   useEffect(() => {
     setTimeout(() => {
       setShowLoader(new Boolean(false).valueOf());
-    }, 1000);
+    }, 800);
   }, [showLoader]);
 
   return (
@@ -30,7 +30,7 @@ function Loading() {
           exit={{
             x: [0, 1000],
             transition: {
-              duration: 1,
+              duration: 0.8,
             },
           }}
           className="w-full h-screen flex flex-col lg:flex-row text-white px-[20px] md:px-[50px] py-[30px] bg-background fixed top-0 z-9999"

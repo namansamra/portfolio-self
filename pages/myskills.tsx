@@ -30,7 +30,7 @@ const ExperienceCard = ({
         <h3 className="text-lg font-semibold break-words">{organisation}</h3>
         <span className="text-[12px]">{timePeriod}</span>
       </div>
-      <span className="text-[14px] font-medium">{workString}</span>
+      <span className="text-[12px] font-medium">{workString}</span>
     </motion.div>
   );
 };

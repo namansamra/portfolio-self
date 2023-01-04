@@ -10,11 +10,10 @@ export default function Home() {
   useEffect(() => {
     try {
       let canvas: any = document.getElementById('canvas');
-
       const el = document.createElement('script');
       el.src = '/canvas.js';
-      document?.head?.appendChild(el);
-
+      document?.head.appendChild(el);
+      console.log(canvas);
       if (canvas) {
         canvas.width =
           window.innerWidth ||
@@ -35,9 +34,9 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="w-full h-screen  text-white px-[20px] md:px-[50px] py-[30px] relative">
+      <div className="w-full h-screen z-0  text-white px-[20px] md:px-[50px] py-[30px] relative overflow-y-auto overflow-x-hidden">
         <canvas
-          className="absolute left-0 z-[-1] top-0 inline-block bg-background"
+          className="absolute left-0 z-[-1] top-0 inline-block bg-background "
           id="canvas"
         ></canvas>
         <Tag tagName="<html>" />

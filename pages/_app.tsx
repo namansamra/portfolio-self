@@ -6,6 +6,7 @@ import createCache from '@emotion/cache';
 import chakraTheme from '../styles/chakraTheme';
 import { useState } from 'react';
 import { MainContext } from '../utils/context';
+import Head from 'next/head';
 
 const emotionCache = createCache({
   key: 'emotion-css-cache',
@@ -17,6 +18,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <CacheProvider value={emotionCache}>
       <ChakraProvider theme={chakraTheme}>
         <MainContext.Provider value={{ showLoader, setShowLoader }}>
+          <Head>
+            <title>NS | Frontend Engineer</title>
+            <link rel="icon" href="/assets/logo.png" />
+          </Head>
           <Component {...pageProps} />
         </MainContext.Provider>
       </ChakraProvider>
