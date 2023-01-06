@@ -37,7 +37,7 @@ function About() {
   return (
     <Layout>
       <div className="w-full h-screen flex flex-col lg:flex-row text-white px-[20px] md:px-[50px] py-[30px] relative bg-background overflow-y-auto">
-        <div className="w-full h-full lg:w-[50%] flex-col gap-4">
+        <div className="w-full h-full sm:w-[50%] lg:w-[60%] flex-col gap-4">
           <Tag tagName="<html>" />
           <Tag tagName="<body>" stylesString="xl:ml-5" />
           <div className="mt-[10%] mb-[20px] sm:my-8">
@@ -73,7 +73,7 @@ function About() {
           <Tag tagName="</body>" stylesString="mt-5 xl:ml-5" />
           <Tag tagName="</html>" stylesString="mt-2" />
         </div>
-        <div className="w-full h-full lg:w-[50%]  bg-background flex items-center justify-center">
+        <div className="w-full h-full sm:w-[50%] lg:w-[40%]  bg-background flex items-center justify-center">
           <div
             id="myCanvasContainer"
             ref={ref}
