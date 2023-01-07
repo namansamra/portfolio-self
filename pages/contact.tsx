@@ -28,16 +28,9 @@ function Contact() {
       textColour: '#08FDD8',
       outlineColour: 'transparent',
       reverse: true,
-      depth: 0.8,
+      depth: 1,
       maxSpeed: 0.08,
-      weight: true,
-      activeCursor: 'pointer',
-      pinchZoom: false,
-      zoomEnabled: false,
-      clickToFront: true,
-      initial: [0.05, -0.1],
-      shape: 'vring(0.3)',
-      offsetY: -50,
+      shape: 'hring',
       lock: 'x',
     });
   }, []);
