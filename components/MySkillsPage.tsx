@@ -22,7 +22,7 @@ function MySkillsPage({ showScrollDown = false }) {
   }: Props) => {
     return (
       <motion.div
-        className="flex flex-col gap-2 w-full rounded-md bg-[#2a2a2a] text-[#ababab] p-6 min-w-[200px] min-h-[200px]"
+        className="flex flex-col gap-2 w-full rounded-md bg-[#2a2a2a] text-[#ababab] p-6 min-w-[250px] min-h-[250px]"
         initial={{ scale: 0 }}
         animate={{ rotate: 360, scale: 1 }}
         transition={{ duration: 2 }}
@@ -97,7 +97,7 @@ function MySkillsPage({ showScrollDown = false }) {
           <ProgressBar titleText="React Js" progress={80} barColor="#D26CD5" />
           <ProgressBar titleText="Node Js" progress={60} />
         </div>
-        <div className="flex flex-col gap-6 lg:gap-4 lg:flex-row lg:items-center">
+        <div className="flex flex-col gap-6 lg:gap-4 lg:flex-row lg:items-center ">
           <ExperienceCard
             position="Frontend Engineer"
             organisation="TartanHq"

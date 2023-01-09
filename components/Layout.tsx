@@ -10,7 +10,7 @@ function Layout({ children }: Props) {
   const { showLoader } = useMainContext();
   return (
     <>
-      <div className="flex relative w-[100vw] h-[100vh] overflow-x-hidden bg-background">
+      <div className="flex relative w-[100vw] h-[100vh] overflow-x-hidden bg-background cursor-default">
         <Sidebar />
         {children}
       </div>

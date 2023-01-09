@@ -170,6 +170,7 @@ function Sidebar({}: Props) {
             rotate: 90,
             scale: 0.75,
           }}
+          className="bg-background p-1 rounded-sm"
         >
           <RxHamburgerMenu />
         </motion.span>
