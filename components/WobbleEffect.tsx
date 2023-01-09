@@ -45,7 +45,7 @@ function WobbleEffect({
   return (
     <motion.h3
       className={
-        `text-[30px] sm:text-[42px] md:text-[80px] lg:text-[80px] xl:text-[100px]text-white font-bold leading-[1] ${
+        `text-[30px] sm:text-[42px] md:text-[80px] lg:text-[80px] text-white font-bold leading-[1] ${
           asLink
             ? 'hover:border-b-2 hover:border-cyan hover:cursor-pointer w-max'
             : ''
@@ -64,6 +64,16 @@ function WobbleEffect({
     >
       {text.split('\\n').map((line, i) => {
         let charSpans = line.split('').map((char, index) => {
+          if (char === 'N') {
+            return (
+              <motion.img
+                key={char + '-' + index + i}
+                src={'/assets/logo.png'}
+                className="inline-block h-[50px] w-[50px] sm:h-[80px] sm:w-[80px] lg:h-[100px] lg:w-[100px] relative bottom-3 right-[-5px] sm:right-[-10px]"
+                animate={{ rotate: -360, transition: { duration: 1 } }}
+              />
+            );
+          }
           return (
             <motion.span
               key={char + '-' + index + i}
