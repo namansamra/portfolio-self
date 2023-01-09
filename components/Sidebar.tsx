@@ -91,7 +91,7 @@ function Sidebar({}: Props) {
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={`w-full flex z-[10] flex-col absolute left-0 bottom-0 top-0 right-0 bg-sideMenuBg xl:sticky  xl:right-0 xl:w-[170px] text-cyan transition-all ease-out duration-700 items-center xl:block border-r-[1px] border-black`}
+            className={`w-full flex z-[10] flex-col fixed left-0 bottom-0 top-0 right-0 bg-sideMenuBg xl:sticky  xl:right-0 xl:w-[170px] text-cyan transition-all ease-out duration-700 items-center xl:block border-r-[1px] border-black`}
           >
             <div
               className="flex flex-col bg-black w-full p-4 py-8 items-center justify-center"

@@ -21,6 +21,16 @@ export default function App({ Component, pageProps }: AppProps) {
           <Head>
             <title>NS | Frontend Engineer</title>
             <link rel="icon" href="/assets/logo.png" />
+            <meta
+              name="description"
+              content="Naman Samra, Frontend Engineer Portfolio"
+              key="desc"
+            />
+            <meta property="og:title" content="Naman Samra Portfolio" />
+            <meta
+              property="og:description"
+              content="Naman Samra, Frontend Engineer Portfolio"
+            />
           </Head>
           <Component {...pageProps} />
         </MainContext.Provider>
