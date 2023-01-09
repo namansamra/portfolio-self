@@ -78,10 +78,7 @@ function WorkPage({ showScrollDown = false }) {
     }
   }, [ref?.current]);
   return (
-    <div
-      className="w-full min-h-screen h-full flex flex-col text-white bg-background"
-      ref={ref}
-    >
+    <div className="w-full flex flex-col text-white bg-background" ref={ref}>
       {images.map((img, i) => {
         return (
           <motion.div

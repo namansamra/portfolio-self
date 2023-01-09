@@ -13,6 +13,7 @@ export default function Home() {
         <AboutPage />
         <MySkillsPage />
         <WorkPage />
+        <ContactPage />
       </div>
     </Layout>
   );

@@ -32,8 +32,8 @@ function MainPage({ showScrollDown = false }) {
 
   const router = useRouter();
   return (
-    <div className="flex flex-col w-full h-full gap-[2px]">
-      <div className="w-full h-full z-0  text-white px-[20px] md:px-[50px] pt-[30px] pb-[10px] relative">
+    <div className="flex flex-col w-full  gap-[2px]">
+      <div className="w-full z-0  text-white px-[20px] md:px-[50px] pt-[30px] pb-[10px] relative">
         <canvas
           className="absolute left-0 z-[-1] top-0 inline-block bg-background "
           id="canvas"

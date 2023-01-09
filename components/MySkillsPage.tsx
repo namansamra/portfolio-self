@@ -38,7 +38,7 @@ function MySkillsPage({ showScrollDown = false }) {
   };
 
   return (
-    <div className="w-full h-full flex flex-col lg:flex-row text-white px-[20px] md:px-[50px] py-[30px] relative bg-background">
+    <div className="w-full flex flex-col lg:flex-row text-white px-[20px] md:px-[50px] py-[30px] relative bg-background">
       <div className="flex flex-col min-w-[50%] lg:mr-10 mb-10">
         <Tag tagName="<html>" />
         <Tag tagName="<body>" stylesString="xl:ml-5" />
