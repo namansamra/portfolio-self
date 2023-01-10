@@ -47,7 +47,7 @@ function AboutPage({ showScrollDown = false }) {
         <Tag tagName="<p>" stylesString="xl:ml-5" />
         <div className="flex text-[12px] sm:text-[14px] font-medium max-w-[600px] flex-col mt-2 ml-2 sm:ml-4 xl:ml-12 xl:text-[16px] gap-4">
           <p>
-            I’m a Front-End Developer located in New Delhi. I have a serious
+            I’m a Front-End Developer located in Jaipur. I have a serious
             passion for UI and creating intuitive, dynamic user experiences.
           </p>
           <p>
