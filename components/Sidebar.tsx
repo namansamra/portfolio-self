@@ -102,7 +102,7 @@ function Sidebar({}: Props) {
               </div>
               <span className="text-lg text-white font-bold">Naman</span>
               <span className="text-[12px] text-[#a5a5a5] text-center">
-                Software Developer
+                Software Engineer
               </span>
             </div>
             <div
